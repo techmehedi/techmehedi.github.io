@@ -542,6 +542,9 @@ PROJECTS
     transition: all 600ms ease;
 }
 
+.project__list {
+    margin-bottom: 40px;
+}
 
 .project__wrapper {
     position: relative;
