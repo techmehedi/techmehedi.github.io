@@ -606,6 +606,10 @@ PROJECTS
     margin-right: 16px;
 }
 
+.project__description--links {
+    padding-top: 16px;
+}
+
 
 /* 
 
