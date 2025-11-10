@@ -38,6 +38,11 @@ README.md
 QUICKSTART.md
 SETUP.md
 
+# editor files
+*.swp
+*.swo
+*~
+
 .README.md
 .QUICKSTART.md
 .SETUP.md
