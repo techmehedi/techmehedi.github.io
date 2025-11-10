@@ -37,3 +37,7 @@ next-env.d.ts
 README.md
 QUICKSTART.md
 SETUP.md
+
+.README.md
+.QUICKSTART.md
+.SETUP.md
