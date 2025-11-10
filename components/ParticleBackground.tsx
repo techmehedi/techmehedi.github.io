@@ -98,7 +98,6 @@ export default function ParticleBackground() {
         },
         detectRetina: true,
       }}
-      className="absolute inset-0 z-0"
     />
   )
 }
