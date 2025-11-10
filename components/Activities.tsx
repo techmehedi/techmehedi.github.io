@@ -62,8 +62,7 @@ export default function Activities() {
             >
               <motion.div
                 className={styles.activityIcon}
-                whileHover={{ rotate: 360, scale: 1.2 }}
-                transition={{ duration: 0.6 }}
+                whileHover={{ rotate: 360, scale: 1.2, transition: { duration: 0.6 } }}
                 animate={{
                   boxShadow: [
                     '0 8px 30px rgba(99, 102, 241, 0.3)',
