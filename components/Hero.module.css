@@ -1,0 +1,338 @@
+.hero {
+  min-height: 100vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6rem 1.5rem;
+  padding-top: calc(6rem + 100px);
+  overflow: hidden;
+}
+
+.backgroundGradient {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.content {
+  width: 100%;
+  max-width: 1400px;
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.intro {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 6rem;
+  align-items: center;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.titleWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.title,
+.titleSecond {
+  font-size: clamp(64px, 10vw, 120px);
+  font-weight: 900;
+  font-family: var(--font-space-grotesk), sans-serif;
+  line-height: 0.95;
+  letter-spacing: -0.04em;
+  margin: 0;
+}
+
+.title {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+}
+
+.titleSecond {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 30%, #ec4899 60%, #10b981 100%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 5s ease infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.para {
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.8);
+  max-width: 650px;
+  font-weight: 400;
+}
+
+.gradientText {
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+  font-weight: 600;
+}
+
+.aboutMeBtn {
+  display: inline-block;
+  padding: 0.5rem 1.25rem;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.2) 0%, rgba(139, 92, 246, 0.2) 50%, rgba(236, 72, 153, 0.2) 100%);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 102, 241, 0.4);
+  border-radius: 12px;
+  color: rgba(255, 255, 255, 0.95);
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 600;
+  font-family: var(--font-inter), sans-serif;
+  cursor: pointer;
+  transition: all 300ms;
+  margin-left: 0.25rem;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+  line-height: 1.5;
+}
+
+.aboutMeBtn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  opacity: 0;
+  transition: opacity 300ms;
+  z-index: -1;
+}
+
+.aboutMeBtn:hover::before {
+  opacity: 0.3;
+}
+
+.aboutMeBtn:hover {
+  border-color: rgba(99, 102, 241, 0.6);
+  color: #ffffff;
+  box-shadow: 
+    0 4px 16px rgba(99, 102, 241, 0.3),
+    0 0 20px rgba(99, 102, 241, 0.2);
+  transform: translateY(-2px);
+}
+
+.imageWrapper {
+  position: relative;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+.glow {
+  position: absolute;
+  inset: -20px;
+  border-radius: 30px;
+  z-index: -1;
+  filter: blur(30px);
+}
+
+.headshot {
+  width: 320px;
+  height: 320px;
+  border-radius: 30px;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+  box-shadow: 
+    0 20px 60px rgba(0, 0, 0, 0.5),
+    0 0 0 1px rgba(255, 255, 255, 0.05) inset;
+}
+
+.socialList {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.socialLink {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  color: #ffffff;
+  font-size: 24px;
+  transition: all 300ms;
+  position: relative;
+  overflow: hidden;
+  text-decoration: none;
+}
+
+.socialLink::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  opacity: 0;
+  transition: opacity 300ms;
+}
+
+.socialLink:hover::before {
+  opacity: 0.2;
+}
+
+.socialLink i {
+  position: relative;
+  z-index: 1;
+}
+
+.mailBtn {
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: none;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  color: white;
+  font-size: 28px;
+  cursor: pointer;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 300ms;
+}
+
+.scroll {
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  text-decoration: none;
+}
+
+.scrollIcon {
+  width: 24px;
+  height: 40px;
+  border: 2px solid rgba(255, 255, 255, 0.6);
+  border-radius: 24px;
+  position: relative;
+}
+
+.scrollIcon::after {
+  content: '';
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 4px;
+  height: 8px;
+  background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
+  border-radius: 2px;
+}
+
+@media (max-width: 1024px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+
+  .headshot {
+    width: 280px;
+    height: 280px;
+    margin: 0 auto;
+  }
+
+  .para {
+    text-align: center;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding: 4rem 1rem;
+    padding-top: calc(4rem + 90px);
+    min-height: auto;
+  }
+
+  .intro {
+    gap: 2rem;
+    text-align: left;
+  }
+
+  .text {
+    text-align: left;
+  }
+
+  .titleWrapper {
+    text-align: left;
+  }
+
+  .imageWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .headshot {
+    width: 220px;
+    height: 220px;
+    margin: 0 auto;
+  }
+
+  .para {
+    text-align: left;
+    max-width: 100%;
+  }
+
+  .mailBtn {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+  }
+
+  .socialList {
+    justify-content: center;
+  }
+
+  .socialLink {
+    width: 56px;
+    height: 56px;
+    font-size: 20px;
+  }
+
+  .aboutMeBtn {
+    padding: 0.45rem 1rem;
+    font-size: clamp(14px, 3vw, 18px);
+    margin-left: 0.2rem;
+  }
+
+  .scroll {
+    bottom: 1rem;
+  }
+}
