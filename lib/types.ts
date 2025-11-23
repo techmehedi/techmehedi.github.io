@@ -23,6 +23,8 @@ export interface Education {
   date: string
   gpa?: string
   coursework: string[]
+  activities?: string[]
+  honors?: string[]
 }
 
 export interface Skill {
