@@ -56,8 +56,10 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
     <>
       <div className={styles.backdrop} onClick={onClose}></div>
       <div className={styles.modal}>
-        <div className={styles.about}>
-          <div className={styles.aboutHeader}>
+        <div className={styles.dragHandle}></div>
+        <div className={styles.modalContent}>
+          <div className={styles.about}>
+            <div className={styles.aboutHeader}>
             <div className={styles.headshotWrapper}>
               <Image
                 src="/assets/HeadShot.jpeg"
@@ -98,35 +100,36 @@ export default function ContactModal({ isOpen, onClose }: ContactModalProps) {
               <span className={styles.languageName}>ReactJS</span>
             </div>
           </div>
-        </div>
-        <div className={styles.contact}>
-          <button className={styles.exit} onClick={onClose} aria-label="Close modal">
-            <i className="fas fa-times"></i>
-          </button>
-          <h3 className={styles.title}>Let&apos;s have a chat!</h3>
-          <h4 className={styles.subtitle}>I&apos;m currently open to new opportunities.</h4>
-          <form onSubmit={handleSubmit} className={styles.form}>
-            <div className={styles.formItem}>
-              <label className={styles.label}>Name</label>
-              <input type="text" className={styles.input} name="user_name" required />
-            </div>
-            <div className={styles.formItem}>
-              <label className={styles.label}>Email</label>
-              <input type="email" className={styles.input} name="user_email" required />
-            </div>
-            <div className={styles.formItem}>
-              <label className={styles.label}>Message</label>
-              <textarea className={styles.input} name="message" required rows={4}></textarea>
-            </div>
-            <button type="submit" className={styles.submit} disabled={isLoading}>
-              {isLoading ? 'Sending...' : 'Send it my way'}
+          </div>
+          <div className={styles.contact}>
+            <button className={styles.exit} onClick={onClose} aria-label="Close modal">
+              <i className="fas fa-times"></i>
             </button>
-          </form>
-          {isSuccess && (
-            <div className={styles.success}>
-              Thanks for the message! Looking forward to speaking to you soon.
-            </div>
-          )}
+            <h3 className={styles.title}>Let&apos;s have a chat!</h3>
+            <h4 className={styles.subtitle}>I&apos;m currently open to new opportunities.</h4>
+            <form onSubmit={handleSubmit} className={styles.form}>
+              <div className={styles.formItem}>
+                <label className={styles.label}>Name</label>
+                <input type="text" className={styles.input} name="user_name" required />
+              </div>
+              <div className={styles.formItem}>
+                <label className={styles.label}>Email</label>
+                <input type="email" className={styles.input} name="user_email" required />
+              </div>
+              <div className={styles.formItem}>
+                <label className={styles.label}>Message</label>
+                <textarea className={styles.input} name="message" required rows={4}></textarea>
+              </div>
+              <button type="submit" className={styles.submit} disabled={isLoading}>
+                {isLoading ? 'Sending...' : 'Send it my way'}
+              </button>
+            </form>
+            {isSuccess && (
+              <div className={styles.success}>
+                Thanks for the message! Looking forward to speaking to you soon.
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </>
