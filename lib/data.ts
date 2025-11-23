@@ -56,35 +56,105 @@ export const projects: Project[] = [
 export const experiences: Experience[] = [
   {
     id: '1',
+    title: 'Undergraduate Research Assistant',
+    company: 'The City College of New York',
+    date: 'Nov 2025 – Present',
+    bullets: [
+      'Researching generative AI Agents for NYC Real Estate and Engineering applications',
+      'Developing innovative solutions using cutting-edge AI technologies',
+      'Collaborating with faculty and researchers on advanced AI projects'
+    ]
+  },
+  {
+    id: '2',
+    title: 'Software Engineer Intern',
+    company: 'Locus (YC F25)',
+    date: 'Oct 2025 – Present',
+    bullets: [
+      'Building scalable software solutions for a Y Combinator-backed startup',
+      'Contributing to product development in a fast-paced startup environment',
+      'Working on full-stack development with modern technologies'
+    ]
+  },
+  {
+    id: '3',
     title: 'Software Engineer Intern',
     company: 'JPMorganChase',
     date: 'Jun 2025 – Aug 2025',
     bullets: [
       'Fine-tuned and deployed ML classification model on AWS SageMaker, meeting new business requirements',
       'Built a caching system with OpenSearch, enabling rapid retrieval of model outputs',
-      'Integrated Azure OpenAI LLMs to optimize processes and improve performance by 30%'
+      'Integrated Azure OpenAI LLMs to optimize processes and improve performance by 30%',
+      'Skills: Docker, AWS, Java, Spring Boot, AI, Machine Learning, Python'
     ]
   },
   {
-    id: '2',
+    id: '4',
+    title: 'Programming Instructor',
+    company: 'ScholarStem',
+    date: 'Nov 2022 – May 2025',
+    bullets: [
+      'Taught programming fundamentals to students using Python and JavaScript',
+      'Developed curriculum and lesson plans to enhance student learning outcomes',
+      'Mentored students in coding projects and provided technical guidance',
+      'Skills: Communication, Python, JavaScript, Leadership'
+    ]
+  },
+  {
+    id: '5',
     title: 'Software Engineer Intern',
     company: 'JPMorganChase',
     date: 'Jun 2024 – Aug 2024',
     bullets: [
       'Designed a React and SpringBoot database synchronization tool with real-time updates for 53M customers',
       'Achieved 80% test coverage with Postman + JUnit, strengthening pipeline and reducing code errors',
-      'Presented technical and business impact to senior managers, driving cross-team adoption'
+      'Presented technical and business impact to senior managers, driving cross-team adoption',
+      'Skills: Kubernetes, React.js, JavaScript, TypeScript, Jira, Bitbucket, Confluence, CI/CD'
     ]
   },
   {
-    id: '3',
+    id: '6',
     title: 'Student Research Assistant',
     company: 'The City College of New York',
-    date: 'Jan 2024 – April 2024',
+    date: 'Jan 2024 – Apr 2024',
     bullets: [
       'Assisted in developing ML models for adversarial defense, reducing risks by 30% in a US Air Force project',
       'Increased decision transparency and accuracy by 40% via multimodal sensing & deep learning',
-      'Performed large-scale data preprocessing and feature engineering for model training & evaluation'
+      'Performed large-scale data preprocessing and feature engineering for model training & evaluation',
+      'Skills: PyTorch, Python'
+    ]
+  },
+  {
+    id: '7',
+    title: 'Software Engineer Tech Fellow',
+    company: 'CodePath',
+    date: 'Sep 2023 – Nov 2023',
+    bullets: [
+      'Led web development workshops and code reviews for students',
+      'Mentored fellows in software engineering best practices',
+      'Contributed to curriculum development and technical training programs'
+    ]
+  },
+  {
+    id: '8',
+    title: 'Software Engineer Intern Fellow',
+    company: 'STEMKasa',
+    date: 'Jun 2023 – Aug 2023',
+    bullets: [
+      'Developed full-stack web applications using modern technologies',
+      'Built RESTful APIs and integrated frontend with backend services',
+      'Skills: Node.js, MongoDB, Express.js, React.js'
+    ]
+  },
+  {
+    id: '9',
+    title: 'Software Engineer Intern Fellow',
+    company: 'The Difference',
+    date: 'Jan 2022 – Apr 2022',
+    bullets: [
+      'Developed mobile and web applications using Flutter and React',
+      'Built backend services with Flask and Python',
+      'Skills: Flutter, Dart, Flask, Python, React.js, JavaScript'
     ]
   }
 ]
@@ -93,7 +163,7 @@ export const education: Education = {
   school: 'The City College of New York',
   degree: 'Bachelor of Science in Computer Science',
   date: 'Expected Dec 2026',
-  gpa: '3.9',
+  gpa: '3.9/4.0',
   coursework: [
     'Algorithms',
     'Data Structures',
@@ -102,6 +172,14 @@ export const education: Education = {
     'Software Engineering',
     'Programming Language Paradigms',
     'Computer Security'
+  ],
+  activities: [
+    'Computer Science Club (ACM)',
+    'Google Developer Club',
+    'Dean\'s List'
+  ],
+  honors: [
+    'Dean\'s List'
   ]
 }
 
@@ -126,39 +204,63 @@ export const skills: Skill[] = [
 export const activities: Activity[] = [
   {
     id: '1',
-    title: 'Computer Science Club Treasurer',
-    description: 'Managed budgets and events that doubled student participation in workshops',
-    icon: 'fas fa-users'
+    title: 'HackHarvard Winner',
+    description: 'Won best use of Gemini API award at Harvard University hackathon (Oct 2025)',
+    icon: 'fas fa-trophy'
   },
   {
     id: '2',
-    title: 'Google Developer Club Mentor',
-    description: 'Led coding labs and demo days that gave students more project exposure',
-    icon: 'fab fa-google'
+    title: 'HackKnight Winner',
+    description: 'Won best use of Cloudflare award at Queen\'s College hackathon (Oct 2025)',
+    icon: 'fas fa-trophy'
   },
   {
     id: '3',
-    title: 'ColorStack Ambassador',
-    description: 'Organized interview prep sessions and leadership panels to expand student opportunities',
-    icon: 'fas fa-handshake'
+    title: 'HackNYU Winner',
+    description: 'Won first place in HackNYU on the MLH track (Feb 2024)',
+    icon: 'fas fa-trophy'
   },
   {
     id: '4',
-    title: 'Programming Instructor',
-    description: 'Taught students basic programming using JavaScript, increasing STEM awareness in high schools',
-    icon: 'fas fa-chalkboard-teacher'
+    title: 'John Jay Hackathon Winner',
+    description: 'Won first place at 2023 John Jay College hackathon for web development/software engineering (May 2023)',
+    icon: 'fas fa-trophy'
   },
   {
     id: '5',
-    title: '4× Hackathon Winner',
-    description: 'Delivered working prototypes under pressure and earned multiple first-place wins',
+    title: 'EasyA x Polkadot Hackathon',
+    description: 'Won 2nd place for best use of Polkadot blockchain technology (Apr 2023)',
     icon: 'fas fa-trophy'
   },
   {
     id: '6',
-    title: 'CodePath Fellow',
-    description: 'Led code reviews and project workshops as teaching assistant that improved student completion rates',
-    icon: 'fas fa-graduation-cap'
+    title: 'Microsoft Cybersecurity Scholarship',
+    description: 'Awarded scholarship by Microsoft Scholarship Program (Oct 2022)',
+    icon: 'fas fa-award'
+  },
+  {
+    id: '7',
+    title: 'Volunteer Mentor & Technology Instructor',
+    description: 'Mentored high school students from underinvested communities in NYC, supporting college readiness and digital literacy (Jul 2025 - Sep 2025)',
+    icon: 'fas fa-heart'
+  },
+  {
+    id: '8',
+    title: 'Computer Science Club (ACM)',
+    description: 'Active member of ACM chapter, participating in workshops and technical events',
+    icon: 'fas fa-users'
+  },
+  {
+    id: '9',
+    title: 'Google Developer Club',
+    description: 'Member of Google Developer Club, contributing to coding labs and demo days',
+    icon: 'fab fa-google'
+  },
+  {
+    id: '10',
+    title: 'Dean\'s List',
+    description: 'Recognized for academic excellence with consistent high performance',
+    icon: 'fas fa-star'
   }
 ]
 
