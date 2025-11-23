@@ -6,9 +6,6 @@ const nextConfig = {
     domains: [],
     unoptimized: true,
   },
-  experimental: {
-    optimizePackageImports: ['three', 'gsap'],
-  },
   webpack: (config, { dev, isServer }) => {
     if (dev && !isServer) {
       config.watchOptions = {
