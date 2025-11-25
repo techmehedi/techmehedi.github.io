@@ -28,6 +28,42 @@
   font-size: clamp(2rem, 4vw, 3rem);
   color: var(--ink-900);
   margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.heart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 0.3em;
+  color: var(--accent-terracotta);
+  animation: heartbeat 1.5s ease-in-out infinite;
+  transform-origin: center;
+  vertical-align: middle;
+}
+
+.heart svg {
+  width: 1em;
+  height: 0.9em;
+  display: block;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  10%, 30% {
+    transform: scale(1.1);
+  }
+  20%, 40% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.15);
+  }
 }
 
 .description {

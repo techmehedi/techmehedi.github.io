@@ -13,6 +13,15 @@ export const projects: Project[] = [
   },
   {
     id: '2',
+    title: 'Crypto Tax Calculator Platform',
+    subtitle: 'Next.js, Tailwind, Prisma, Postgres, Helius API, Covalent API, CoinGecko API',
+    description: 'Built data pipelines that aggregate blockchain transactions across multiple networks. Designed APIs to automate cost basis calculations and reporting for IRS-compliant tax forms including Form 8949 and Schedule D.',
+    image: '/assets/CryptoTax.png',
+    githubUrl: 'https://github.com/techmehedi/CryptoTaxCalculator',
+    technologies: ['Next.js', 'Tailwind', 'Prisma', 'Postgres', 'Helius API', 'Covalent API', 'CoinGecko API']
+  },
+  {
+    id: '3',
     title: 'Live News Platform',
     subtitle: 'HTML, CSS, JavaScript',
     description: 'Live news web application that displays news & blog articles, topics, and content based on user search.',
@@ -22,7 +31,7 @@ export const projects: Project[] = [
     technologies: ['HTML', 'CSS', 'JavaScript']
   },
   {
-    id: '3',
+    id: '4',
     title: 'AI Spam Detector',
     subtitle: 'Python, Pandas, Streamlit, Scikit-learn',
     description: 'AI-powered spam detection system using machine learning and Streamlit, enabling real-time classification of messages as spam or not spam with a user-friendly web interface',
@@ -32,7 +41,16 @@ export const projects: Project[] = [
     technologies: ['Python', 'Streamlit', 'Scikit-learn']
   },
   {
-    id: '4',
+    id: '5',
+    title: 'AI Grammar Editor Platform',
+    subtitle: 'Python/Flask, Ollama, PyQt6, OpenAI API',
+    description: 'Built an AI-powered editing system using LLMs for text correction and refinement. Designed collaborative features with real-time updates and role-based access control for a Google Docs-like experience.',
+    image: '/assets/AI-Grammer-Editor-Platform.png',
+    githubUrl: 'https://github.com/techmehedi/AI-TEXT-EDITOR',
+    technologies: ['Python', 'Flask', 'Ollama', 'PyQt6', 'OpenAI API']
+  },
+  {
+    id: '6',
     title: 'E-Commerce Library',
     subtitle: 'React, JavaScript, HTML, CSS',
     description: 'E-commerce app that displays data about popular and recommended books for others to explore.',
@@ -42,7 +60,7 @@ export const projects: Project[] = [
     technologies: ['React', 'JavaScript']
   },
   {
-    id: '5',
+    id: '7',
     title: 'Mental Health Hub',
     subtitle: 'HTML, CSS, JavaScript, Python',
     description: 'Mental health section added to City University of New York\'s official website. Allows students to easily schedule appointments with mental health counselors, collaborate with other students on similar topics, and talk to a AI mental health chatbot.',
